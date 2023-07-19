@@ -1,0 +1,71 @@
+/* Reset some default styles */
+/*body, ul {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
+
+/*.menu-container {*/
+/*  position: relative;*/
+/*}*/
+
+/*.menu-icon {*/
+/*  font-size: 24px;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*.menu {*/
+
+/*  animation-duration: 2s; !* Set the animation duration *!*/
+/*}*/
+
+/* Hide the menu when the checkbox is unchecked */
+.menu_out {
+  animation-duration: 0.5s; /* Set the animation duration */
+  animation-name: fadeOutRight; /* Apply fade-out animation */
+}
+
+/* Show the menu when the checkbox is checked */
+.menu_in {
+  animation-duration: 0.5s; /* Set the animation duration */
+  animation-name: fadeInRight; /* Apply fade-in animation */
+  /*z-index: 1;*/
+  /*padding: 20px;*/
+  position: absolute;
+  /*top: 0px; !* Adjust the position as needed *!*/
+  /*left: 40px; !* Adjust the position as needed *!*/
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframes for the fade-out animation */
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+.section2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Change opacity (0.5) for the desired darkness */
+  z-index: -1; /* Set a lower z-index to stay behind the section content */
+}

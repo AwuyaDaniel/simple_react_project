@@ -1,26 +1,29 @@
 // NavBar.js
 import React, {useState} from 'react';
+import '../assets/css/main_style.css'
+
 
 const NavBar = () => {
     const [toggle, setToggle] = useState("hidden");
     const handleButtonClick = () => {
-        if  (toggle ==="hidden"){
-            setToggle("")
+        if (toggle === "hidden") {
+            setToggle("menu_in")
         } else {
             setToggle("hidden")
         }
-}
-return (
+    }
+    return (
 
-        <nav className="bg-white border-gray-200 dark:bg-gray-900">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <nav className="bg-slate-100 border-gray-400 border-b-0 md:py-8">
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto md:p-2 p-4">
                 <a href="https://flowbite.com/" className="flex items-center">
-                    <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo"/>
+                    <img src="/img/favicon.png" className="h-12 mr-3" alt="Flowbite Logo"/>
                     <span
-                        className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                        className="self-center text-4xl font-semibold whitespace-nowrap dark:text-black">React</span>
                 </a>
+
                 <button data-collapse-toggle="navbar-default" type="button"
-                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        className="inline-flex bg-white items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                         aria-controls="navbar-default" aria-expanded="false"
                         onClick={handleButtonClick}>
                     <span className="sr-only">Open main menu</span>
@@ -30,29 +33,110 @@ return (
                               d="M1 1h15M1 7h15M1 13h15"/>
                     </svg>
                 </button>
-                <div className={`${toggle} w-full mix-blend-normal md:block md:w-auto`} id="navbar-default">
-                    <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <div className={`${toggle} absolute top-0 right-0 w-3/4 md:relative md:flex md:block md:w-auto`}
+                     id="navbar-default">
+                    <ul className=" font-medium flex flex-col p-4 md:p-0 border border-gray-100 bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-zinc-900 md:dark:bg-gray-100 dark:border-gray-700">
+                        <div className="block md:hidden flex flex-row place-content-between py-8">
+                            <div className="basis-1/2 fill-blue-500">
+                                <a href="https://flowbite.com/" className="flex items-center">
+                                    <img src="/img/favicon.png" className="h-8 mr-3"
+                                         alt="Flowbite Logo"/>
+                                    <span
+                                        className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">React</span>
+                                </a>
+                            </div>
+                            <div className="basis-1/12">
+                                <button data-collapse-toggle="navbar-default" type="button"
+                                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                        aria-controls="navbar-default" aria-expanded="false"
+                                        onClick={handleButtonClick}>
+                                    <span className="sr-only">Open main menu</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                         stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+
+                                </button>
+                            </div>
+                        </div>
                         <li>
                             <a href="#"
-                               className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                               aria-current="page">Home</a>
+                               className=" border-b rounded-none border-slate-700 block py-4 pl-3 pr-4 text-black rounded md:px-8 md:text-xl md:border-0 hover:bg-gray-100 md:bg-transparent md:p-0 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            >Home</a>
                         </li>
                         <li>
                             <a href="#"
-                               className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                               className="border-b rounded-none border-slate-700 block py-4 pl-3 pr-4 md:text-gray-900 md:px-8 rounded md:text-xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
                         </li>
                         <li>
                             <a href="#"
-                               className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+                               className="border-b rounded-none border-slate-700 block py-4 pl-3 pr-4 text-gray-900 md:px-8 rounded md:text-xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
                         </li>
                         <li>
                             <a href="#"
-                               className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+                               className="border-b rounded-none border-slate-700 block py-4 pl-3 pr-4 text-gray-900 md:px-8 rounded md:text-xl hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Our Project</a>
                         </li>
                         <li>
                             <a href="#"
-                               className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                               className="block py-4 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:text-xl md:px-8 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pages</a>
                         </li>
+                        <div className="md:hidden">
+                            <h1 className="text-white py-4 pl-3 pr-4 text-2xl font-bold">Get In Touch</h1>
+                            <div className="flex flex-row">
+                                <div className="basis-1/12 py-4 pl-3 pr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                         stroke-width="1.5" stroke="white"
+                                         className="w-12 h-12 bg-indigo-500 text-gray-900 rounded-full p-3">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+                                    </svg>
+
+                                </div>
+                                <div className="basis-1/2 text-white py-4 text-sm">
+                                    <div className="flex flex-col">
+                                        <div>Email</div>
+                                        <div>awuyadanielz@gmail.com</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex flex-row">
+                                <div className="basis-1/12 py-4 pl-3 pr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                         stroke-width="1.5" stroke="white"
+                                         className="w-12 h-12 bg-indigo-500 text-gray-900 rounded-full p-3">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+                                    </svg>
+                                </div>
+                                <div className="basis-1/2 text-white py-4 text-sm">
+                                    <div className="flex flex-col">
+                                        <div>Phone</div>
+                                        <div>(234)9 09020 8174</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex flex-row">
+                                <div className="basis-1/12 py-4 pl-3 pr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                         stroke-width="1.5" stroke="white"
+                                         className="w-12 h-12 bg-indigo-500 text-gray-900 rounded-full p-3">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                                    </svg>
+                                </div>
+                                <div className="basis-1/2 text-white py-4 text-sm">
+                                    <div className="flex flex-col">
+                                        <div>Location</div>
+                                        <div>Lagos, Nigeria</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="border-b rounded-none border-slate-700 py-6"></div>
+                            </div>
+                        </div>
                     </ul>
                 </div>
             </div>
