@@ -4,7 +4,7 @@ import Homepage from "./Components/Home";
 
 export default function App() {
     return (
-        <div className="App">
+        <div className="App relative">
             <Navbar></Navbar>
             <Homepage></Homepage>
         </div>

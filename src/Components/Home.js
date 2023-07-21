@@ -1,4 +1,5 @@
 import React from "react";
+import UpAndDownAnimation from "./UpAndDownAnimation";
 
 const Homepage = () => {
     return (
@@ -56,8 +57,24 @@ const Homepage = () => {
             </div>
 
             <div>
-                <div className="py-10">
-                    <img src="/img/slider/hero-1.png" alt="Flowbite Logo"/>
+                <div className="py-10 relative z-0">
+
+                    <UpAndDownAnimation>
+                        <div className="absolute right-10 pt-10">
+                        <img src="/img/slider/hero-star-shape.png" alt="react Logo"/>
+                    </div>
+                    </UpAndDownAnimation>
+                    <div className="absolute bottom-0 right-10 pb-40">
+                        <img src="/img/slider/hero-circle-shape.png " alt="react Logo"/>
+                    </div>
+                    <div className="absolute bottom-0 left-0 pb-32">
+                        <UpAndDownAnimation>
+                            <img src="/img/slider/hero-angel-shape.png" alt="react Logo"/>
+                        </UpAndDownAnimation>
+
+                    </div>
+
+                    <img src="/img/slider/hero-1.png" alt="react Logo"/>
                 </div>
             </div>
             <div className="py-2">
@@ -69,6 +86,7 @@ const Homepage = () => {
                 </div>
             </div>
         </div>
+
     )
 }
 export default Homepage

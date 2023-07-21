@@ -14,7 +14,7 @@ const NavBar = () => {
     }
     return (
 
-        <nav className="bg-slate-100 border-gray-400 border-b-0 md:py-8">
+        <nav className="bg-slate-100 border-gray-400 border-b-0 md:py-8 sticky top-0 z-50">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto md:p-2 p-4">
                 <a href="https://flowbite.com/" className="flex items-center">
                     <img src="/img/favicon.png" className="h-12 mr-3" alt="Flowbite Logo"/>
@@ -33,7 +33,7 @@ const NavBar = () => {
                               d="M1 1h15M1 7h15M1 13h15"/>
                     </svg>
                 </button>
-                <div className={`${toggle} absolute top-0 right-0 w-3/4 md:relative md:flex md:block md:w-auto`}
+                <div className={`${toggle} absolute top-0 right-0 w-3/4 md:relative md:flex md:block md:w-auto z-50`}
                      id="navbar-default">
                     <ul className=" font-medium flex flex-col p-4 md:p-0 border border-gray-100 bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-zinc-900 md:dark:bg-gray-100 dark:border-gray-700">
                         <div className="block md:hidden flex flex-row place-content-between py-8">
@@ -136,6 +136,39 @@ const NavBar = () => {
                             </div>
                             <div>
                                 <div className="border-b rounded-none border-slate-700 py-6"></div>
+                            </div>
+                            <div>
+                                <div className="flex flex-row justify-center gap-x-2 py-12">
+                                    <div className="bg-white text-gray-900 rounded-lg p-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+
+                                    </div>
+                                    <div className="bg-white text-gray-900 rounded-lg p-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div className="bg-white text-gray-900 rounded-lg p-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div className="bg-white text-gray-900 rounded-lg p-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                             stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="md:block flex md:order-2 hidden">
